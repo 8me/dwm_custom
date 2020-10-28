@@ -94,7 +94,8 @@ static const char *voloffcmd[]     = { "amixer", "set", "Master", "0", NULL };
 static const char *printcmd[]      = { "scrot", NULL };
 static const char *printfocuscmd[] = { "scrot", "--focused", NULL };
 static const char *qutebrowsercmd[]     = { "qutebrowser", NULL };
-static const char *chromiumcmd[] = {"chromium-browser", NULL};
+static const char *chromiumcmd[] = {"chromium", NULL};
+static const char *telegramcmd[] = {"telegram-desktop", NULL};
 //static const char *togglekbdcmd[] = {"\"(setxkbmap -query | grep -q 'us') && setxkbmap de || setxkbmap us\"",NULL};
 //static const char *statusbarcmd[] = {"\"nohup dwmstatusbar\"", NULL};
 
@@ -132,6 +133,7 @@ static Key keys[] = {
   { MODKEY|ShiftMask,  XK_i,          spawn,           {.v = irssicmd} },
   { MODKEY|ShiftMask,  XK_l,          spawn,           {.v = lockcmd} },
   { MODKEY|ShiftMask,  XK_m,          spawn,           {.v = mailcmd} },
+  { MODKEY|ShiftMask,  XK_t,          spawn,           {.v = telegramcmd} },
   { MODKEY|ShiftMask,  XK_s,          spawn,           {.v = padcmd} },
   { MODKEY,            XK_p,          spawn,           {.v = printcmd} },
   { MODKEY|ShiftMask,  XK_p,          spawn,           {.v = printfocuscmd} },
