@@ -27,7 +27,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = {
-  "1-hme", "2-web", "3-dev", "4-doc", "5-img",
+  "1-hme", "2-web", "3-dev", "4-doc", "5-rmt",
   "6-mmd", "7-cmm", "8-tex", "9-foo",
 };
 
@@ -46,6 +46,7 @@ static const Rule rules[] = {
   {  "okular",       NULL,        NULL,          1 << 3,  False,       -1 },
   { "Inkscape",      NULL,        NULL,          1 << 5,  False,       -1 },
   { "Telegram",      NULL,        NULL,          1 << 6,  False,       -1 },
+  { "Signal",        NULL,        NULL,          1 << 6,  False,       -1 },
   {  "Rocket.Chat",  NULL,        NULL,          1 << 6,  False,       -1 },
   { "Thunderbird",   NULL,        NULL,          1 << 6,  False,       -1 },
   {  NULL,           NULL,        "mutt",        1 << 7,  False,       -1 },
@@ -96,6 +97,7 @@ static const char *printfocuscmd[] = { "scrot", "--focused", NULL };
 static const char *qutebrowsercmd[]     = { "qutebrowser", NULL };
 static const char *chromiumcmd[] = {"chromium", NULL};
 static const char *telegramcmd[] = {"telegram-desktop", NULL};
+static const char *signalcmd[] = {"signal-desktop", NULL};
 //static const char *togglekbdcmd[] = {"\"(setxkbmap -query | grep -q 'us') && setxkbmap de || setxkbmap us\"",NULL};
 //static const char *statusbarcmd[] = {"\"nohup dwmstatusbar\"", NULL};
 
@@ -134,7 +136,7 @@ static Key keys[] = {
   { MODKEY|ShiftMask,  XK_l,          spawn,           {.v = lockcmd} },
   { MODKEY|ShiftMask,  XK_m,          spawn,           {.v = mailcmd} },
   { MODKEY|ShiftMask,  XK_t,          spawn,           {.v = telegramcmd} },
-  { MODKEY|ShiftMask,  XK_s,          spawn,           {.v = padcmd} },
+  { MODKEY|ShiftMask,  XK_s,          spawn,           {.v = signalcmd} },
   { MODKEY,            XK_p,          spawn,           {.v = printcmd} },
   { MODKEY|ShiftMask,  XK_p,          spawn,           {.v = printfocuscmd} },
   { MODKEY|ShiftMask,  XK_r,          spawn,           {.v = rangercmd} },
