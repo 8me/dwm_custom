@@ -47,6 +47,7 @@ static const Rule rules[] = {
   { "Inkscape",      NULL,        NULL,          1 << 5,  False,       -1 },
   { "Telegram",      NULL,        NULL,          1 << 6,  False,       -1 },
   { "Signal",        NULL,        NULL,          1 << 6,  False,       -1 },
+  { "Slack",         NULL,        NULL,          1 << 6,  False,       -1 },
   {  "Rocket.Chat",  NULL,        NULL,          1 << 6,  False,       -1 },
   { "Thunderbird",   NULL,        NULL,          1 << 6,  False,       -1 },
   {  NULL,           NULL,        "mutt",        1 << 7,  False,       -1 },
